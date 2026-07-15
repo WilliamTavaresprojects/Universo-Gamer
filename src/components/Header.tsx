@@ -27,13 +27,14 @@ export default function Header({
 
   return (
     <header className="sticky top-0 z-40 w-full border-b transition-all duration-300 backdrop-blur-xl border-neutral-200/30 dark:border-white/10 bg-white/80 dark:bg-[#020617]/75">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 sm:h-28 md:h-32 flex items-center justify-between">
         {/* Brand Logo - Universo On-line */}
         <a href="#" className="flex items-center group">
           <TransparentLogo
             src="https://i.ibb.co/9znFG8K/IMG-1986.png"
             alt="Universo On-line Logo"
-            className="h-14 sm:h-16 md:h-18 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+            className="h-18 sm:h-22 md:h-26 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+            darkMode={darkMode}
           />
         </a>
 

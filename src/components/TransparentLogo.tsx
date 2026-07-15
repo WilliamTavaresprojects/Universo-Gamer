@@ -4,9 +4,10 @@ interface TransparentLogoProps {
   src: string;
   alt: string;
   className?: string;
+  darkMode?: boolean;
 }
 
-export default function TransparentLogo({ src, alt, className }: TransparentLogoProps) {
+export default function TransparentLogo({ src, alt, className, darkMode = true }: TransparentLogoProps) {
   const [processedSrc, setProcessedSrc] = useState<string>(src);
   const [useFallback, setUseFallback] = useState<boolean>(false);
 
@@ -56,11 +57,20 @@ export default function TransparentLogo({ src, alt, className }: TransparentLogo
     };
   }, [src]);
 
+  // If Canvas manipulation is blocked (CORS), use advanced CSS fallbacks:
+  // In dark mode: mix-blend-screen lets the black logo background blend out.
+  // In light mode: invert(1) turns black to white (which blends out via multiply) and white to black.
+  const fallbackClass = useFallback
+    ? darkMode
+      ? "mix-blend-screen bg-transparent"
+      : "invert mix-blend-multiply bg-transparent"
+    : "";
+
   return (
     <img
       src={processedSrc}
       alt={alt}
-      className={`${className} ${useFallback ? "mix-blend-screen bg-transparent" : ""}`}
+      className={`${className} ${fallbackClass}`}
       referrerPolicy="no-referrer"
     />
   );

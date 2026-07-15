@@ -30,7 +30,8 @@ export default function Footer({ onOpenAdmin, isAdminLoggedIn }: FooterProps) {
               <TransparentLogo
                 src="https://i.ibb.co/9znFG8K/IMG-1986.png"
                 alt="Universo On-line Logo"
-                className="h-14 sm:h-16 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+                className="h-20 sm:h-24 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+                darkMode={true}
               />
             </a>
             <p className="text-xs text-neutral-400 leading-relaxed">

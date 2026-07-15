@@ -21,8 +21,8 @@ export default function App() {
     if (saved) {
       return saved === "dark";
     }
-    // Auto matching system preference
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    // Default to true (dark mode) for a premium, high-tech immersive look
+    return true;
   });
 
   // Dynamic CMS Content state
