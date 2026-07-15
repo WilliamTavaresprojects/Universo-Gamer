@@ -1,0 +1,6 @@
+{
+  "name": "Universo On-line",
+  "description": "Website institucional premium e CMS administrativo para a Universo On-line, especializada em desenvolvimento de sites, sistemas web e soluções digitais de alta performance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
