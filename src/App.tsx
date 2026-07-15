@@ -10,6 +10,7 @@ import Testimonials from "./components/Testimonials";
 import AiAssistant from "./components/AiAssistant";
 import AdminPanel from "./components/AdminPanel";
 import Footer from "./components/Footer";
+import MouseTrail from "./components/MouseTrail";
 
 import { initialContent } from "./data";
 import { AppContent, Testimonial } from "./types";
@@ -73,6 +74,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen transition-colors duration-300 bg-white text-neutral-900 dark:bg-dark-bg dark:text-neutral-100 relative overflow-hidden">
+      
+      {/* Interactive mouse and drag-trail effect */}
+      <MouseTrail />
       
       {/* Immersive UI Ambient Background Glow Elements */}
       <div className="absolute top-[5%] right-[-5%] w-[600px] h-[600px] bg-neon-blue/10 dark:bg-neon-blue/8 blur-[130px] rounded-full pointer-events-none z-0" />

@@ -1,5 +1,5 @@
 import React from "react";
-import { Laptop, Phone, Mail, MapPin, Instagram, Facebook, Linkedin, ArrowUp } from "lucide-react";
+import { Laptop, Phone, Mail, Instagram, Facebook, Linkedin, ArrowUp } from "lucide-react";
 import TransparentLogo from "./TransparentLogo";
 
 interface FooterProps {
@@ -88,13 +88,6 @@ export default function Footer({ onOpenAdmin, isAdminLoggedIn }: FooterProps) {
                 <a href="mailto:contato@universoonline.tech" className="hover:text-white">
                   contato@universoonline.tech
                 </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin size={14} className="text-neon-blue shrink-0 mt-0.5" />
-                <span>
-                  Av. Paulista, 1000 • Bela Vista<br />
-                  São Paulo - SP • CEP 01310-100
-                </span>
               </li>
             </ul>
           </div>
