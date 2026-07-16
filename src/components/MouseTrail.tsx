@@ -289,23 +289,11 @@ export default function MouseTrail() {
   }, []);
 
   return (
-    <>
-      <canvas
-        id="mouse-trail-canvas"
-        ref={canvasRef}
-        className="fixed inset-0 pointer-events-none z-30"
-        style={{ mixBlendMode: "screen" }}
-      />
-      {/* Floating interactive tooltip showing how to activate high-energy drag mode */}
-      <div className="fixed bottom-24 left-6 z-35 pointer-events-none select-none hidden md:flex flex-col gap-1 items-start bg-neutral-900/80 dark:bg-neutral-950/80 backdrop-blur-md px-3 py-2 rounded-lg border border-neutral-200/10 text-[11px] text-neutral-400">
-        <div className="flex items-center gap-1.5 font-medium text-neutral-200">
-          <div className={`w-2 h-2 rounded-full ${isDragging ? "bg-cyan-400 animate-ping" : "bg-cyan-500"}`} />
-          <span>Rastro Luminoso Premium</span>
-        </div>
-        <p className="text-neutral-500">
-          {isDragging ? "Modo de arrasto ativo! ✨" : "Arraste e segure o mouse para ativar o fluxo de energia"}
-        </p>
-      </div>
-    </>
+    <canvas
+      id="mouse-trail-canvas"
+      ref={canvasRef}
+      className="fixed inset-0 pointer-events-none z-30"
+      style={{ mixBlendMode: "screen" }}
+    />
   );
 }
